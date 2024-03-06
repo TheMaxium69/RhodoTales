@@ -26,10 +26,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 protected:
+
+	void FunctionMoveY(float value);
+	void FunctionToRun();
+	void FunctionNotToRun();
+	void FunctionToJump();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MyCamera")
 		USpringArmComponent* mySpringArm;
