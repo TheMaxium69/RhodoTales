@@ -49,6 +49,11 @@ Amyperso::Amyperso()
 
 	mySpringArm->bUsePawnControlRotation = true;
 
+	myCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("myCamera"));
+
+	myCamera->SetupAttachment(mySpringArm);
+
+
 
 
 
