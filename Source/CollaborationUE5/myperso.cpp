@@ -4,6 +4,7 @@
 #include "myperso.h"
 
 #include "Components/CapsuleComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 
 // Sets default values
 Amyperso::Amyperso()
@@ -34,6 +35,19 @@ Amyperso::Amyperso()
 
 	GetMesh()->SetRelativeLocation(FVector(0.f, 0.f, -90.f));
 	GetMesh()->SetRelativeRotation(FRotator(0.f, -90.f, 0.f));
+
+
+	// Set Joueur 1
+
+	AutoPossessPlayer = EAutoReceiveInput::Player0;
+
+	// Camera
+
+	mySpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("mySpringArm"));
+
+	mySpringArm->SetupAttachment(RootComponent);
+
+	mySpringArm->bUsePawnControlRotation = true;
 
 
 

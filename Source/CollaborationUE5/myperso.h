@@ -3,8 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "myperso.generated.h"
+
 
 UCLASS()
 class COLLABORATIONUE5_API Amyperso : public ACharacter
@@ -25,5 +28,13 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+protected:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MyCamera")
+		USpringArmComponent* mySpringArm;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="MyCamera")
+		UCameraComponent* myCamera;
 
 };
