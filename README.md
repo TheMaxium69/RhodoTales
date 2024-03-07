@@ -1,2 +1,2 @@
-# MyFirstGameTyroStudio
-Mon Premier Jeux pour TyroStudio, avec Unreal Engine 5
+# RhodoTales
+⛰️RhodoTales Officiel, Premier Jeux de TyroStudio
